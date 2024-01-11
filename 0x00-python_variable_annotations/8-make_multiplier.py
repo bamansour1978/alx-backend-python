@@ -9,4 +9,3 @@ def make_multiplier(multiplier: float) -> Callable[[float], float]:
         """function 2 documentation"""
         return number * multiplier
     return multiplier_func
-    
