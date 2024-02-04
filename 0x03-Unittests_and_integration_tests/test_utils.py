@@ -9,8 +9,8 @@ from utils import access_nested_map, get_json, memoize
 
 
 class TestAccessNestedMap(unittest.TestCase):
-    """ 
-    Class documentation 
+    """
+    Class documentation
     """
     @parameterized.expand([
         ({"a": 1}, ("a",), 1),
@@ -19,19 +19,19 @@ class TestAccessNestedMap(unittest.TestCase):
     ])
     def test_access_nested_map(self, nested_map, path, answer):
         """
-        Function documentation 
+        Function documentation
         """
         self.assertEqual(access_nested_map(nested_map, path), answer)
 
-    """  
-    documentation 
+    """
+    documentation
     """
     @parameterized.expand([
         ({}, ("a",)),
         ({"a": 1}, ("a", "b")),
     ])
     def test_access_nested_map_exception(self, nested_map, path):
-        """ 
+        """
         Function documentation
         """
         with self.assertRaises(KeyError) as error:
@@ -40,7 +40,7 @@ class TestAccessNestedMap(unittest.TestCase):
 
 
 class TestGetJson(unittest.TestCase):
-    """ 
+    """
     Class documentation
     """
     @parameterized.expand([
@@ -58,7 +58,7 @@ class TestGetJson(unittest.TestCase):
 
 
 class TestMemoize(unittest.TestCase):
-    """ 
+    """
     Class documentation
     """
     def test_memoize(self):
